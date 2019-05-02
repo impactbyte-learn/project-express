@@ -131,8 +131,19 @@ const usersMiddleware = {
   // ---------------------------------------------------------------------------
   // Search user(s)
   searchByKeyword: (req, res, next) => {
+    const keyword = req.query.q.toLowerCase()
+
+    const foundUsers = usersData.filter(user => {
+      if (user.name.toLowerCase().includes(keyword)) return user
+      if (user.username.toLowerCase().includes(keyword)) return user
+      if (user.email.toLowerCase().includes(keyword)) return user
+      if (user.phone.toLowerCase().includes(keyword)) return user
+    })
+
     res.send({
-      message: 'Searched user(s) by keyword'
+      message: 'Searched user(s) by keyword',
+      keyword: keyword,
+      data: foundUsers
     })
   }
 }
