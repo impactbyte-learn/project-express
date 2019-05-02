@@ -9,10 +9,33 @@ const debug = require('debug')('project-express:server')
 const http = require('http')
 
 /**
+ * Get port from environment and store in Express.
+ */
+
+const port = normalizePort(process.env.PORT || '8000')
+app.set('port', port)
+
+/**
+ * Create HTTP server.
+ */
+
+const server = http.createServer(app)
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port, () => {
+  console.log(`Project Express is running on localhost:${port}`)
+})
+server.on('error', onError)
+server.on('listening', onListening)
+
+/**
  * Normalize a port into a number, string, or false.
  */
 
-const normalizePort = val => {
+function normalizePort(val) {
   const port = parseInt(val, 10)
 
   if (isNaN(port)) {
@@ -32,7 +55,7 @@ const normalizePort = val => {
  * Event listener for HTTP server "error" event.
  */
 
-const onError = error => {
+function onError(error) {
   if (error.syscall !== 'listen') {
     throw error
   }
@@ -58,32 +81,8 @@ const onError = error => {
  * Event listener for HTTP server "listening" event.
  */
 
-const onListening = () => {
+function onListening() {
   const addr = server.address()
   const bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port
   debug('Listening on ' + bind)
 }
-
-/**
- * Get port from environment and store in Express.
- */
-
-const port = normalizePort(process.env.PORT || '3000')
-
-app.set('port', port)
-
-/**
- * Create HTTP server.
- */
-
-const server = http.createServer(app)
-
-/**
- * Listen on provided port, on all network interfaces.
- */
-
-server.listen(port, () => {
-  console.log(`Express app is listening on localhost:${port}`)
-})
-server.on('error', onError)
-server.on('listening', onListening)

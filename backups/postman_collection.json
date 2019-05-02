@@ -1,0 +1,281 @@
+{
+  "info": {
+    "_postman_id": "c891736c-e481-434e-b5bf-21ad8ebf3bb3",
+    "name": "Project Express",
+    "description": "Project Express",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "Get all users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{url}}/users",
+              "host": ["{{url}}"],
+              "path": ["users"]
+            },
+            "description": "Get all users"
+          },
+          "response": []
+        },
+        {
+          "name": "Get one user by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{url}}/users/2",
+              "host": ["{{url}}"],
+              "path": ["users", "2"]
+            },
+            "description": "Get all users"
+          },
+          "response": []
+        },
+        {
+          "name": "Post new user",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Impact Byte\",\n  \"username\": \"impactbyte\",\n  \"email\": \"hello@impactbyte.com\",\n  \"phone\": \"+1-234-567-890\"\n}\n"
+            },
+            "url": {
+              "raw": "{{url}}/users",
+              "host": ["{{url}}"],
+              "path": ["users"]
+            },
+            "description": "Get all users"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete all users",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{url}}/users",
+              "host": ["{{url}}"],
+              "path": ["users"]
+            },
+            "description": "Get all users"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete one user by id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{url}}/users/1",
+              "host": ["{{url}}"],
+              "path": ["users", "1"]
+            },
+            "description": "Get all users"
+          },
+          "response": []
+        },
+        {
+          "name": "Update one user by id",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Bravery\",\n  \"username\": \"bravery\",\n  \"email\": \"bravery@braverion.com\",\n  \"phone\": \"+62-812-345-678\"\n}\n"
+            },
+            "url": {
+              "raw": "{{url}}/users/2",
+              "host": ["{{url}}"],
+              "path": ["users", "2"]
+            },
+            "description": "Get all users"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "todos",
+      "item": [
+        {
+          "name": "Get all todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{url}}/todos",
+              "host": ["{{url}}"],
+              "path": ["todos"]
+            },
+            "description": "Get all users"
+          },
+          "response": []
+        },
+        {
+          "name": "Get one todo by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{url}}/todos/2",
+              "host": ["{{url}}"],
+              "path": ["todos", "2"]
+            },
+            "description": "Get all users"
+          },
+          "response": []
+        },
+        {
+          "name": "Post new todo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \n}\n"
+            },
+            "url": {
+              "raw": "{{url}}/todos",
+              "host": ["{{url}}"],
+              "path": ["todos"]
+            },
+            "description": "Get all users"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete all todos",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{url}}/todos",
+              "host": ["{{url}}"],
+              "path": ["todos"]
+            },
+            "description": "Get all users"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete one todo by id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{url}}/todos/1",
+              "host": ["{{url}}"],
+              "path": ["todos", "1"]
+            },
+            "description": "Get all users"
+          },
+          "response": []
+        },
+        {
+          "name": "Update one todo by id",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n \n}\n"
+            },
+            "url": {
+              "raw": "{{url}}/todos/2",
+              "host": ["{{url}}"],
+              "path": ["todos", "2"]
+            },
+            "description": "Get all users"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Get homepage",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "{{url}}",
+          "host": ["{{url}}"]
+        },
+        "description": "Get homepage"
+      },
+      "response": []
+    }
+  ]
+}
